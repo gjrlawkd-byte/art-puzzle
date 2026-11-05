@@ -147,9 +147,9 @@ scene.add(new THREE.AmbientLight(0xffffff, 0.9));
 const sun = new THREE.DirectionalLight(0xffffff, 0.9);
 sun.position.set(2, -3, 6); sun.castShadow = true;
 sun.shadow.mapSize.set(2048, 2048);
-Object.assign(sun.shadow.camera, { left: -8, right: 8, top: 8, bottom: -8 });
+Object.assign(sun.shadow.camera, { left: -20, right: 20, top: 20, bottom: -20 }); // 화면을 멀리 옮겨도 그림자 경계가 안 보이게
 scene.add(sun);
-const table = new THREE.Mesh(new THREE.PlaneGeometry(40, 40), new THREE.MeshStandardMaterial({ color: 0x3b2c20, roughness: 0.9 }));
+const table = new THREE.Mesh(new THREE.PlaneGeometry(200, 200), new THREE.MeshStandardMaterial({ color: 0x3b2c20, roughness: 0.9 }));
 table.position.z = -0.01; table.receiveShadow = true;
 scene.add(table);
 
