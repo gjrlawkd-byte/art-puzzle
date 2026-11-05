@@ -1,0 +1,17 @@
+{
+  "name": "art-puzzle",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3000",
+    "build": "vite build && node scripts/copy-assets.mjs && ait build",
+    "deploy": "ait deploy"
+  },
+  "dependencies": {
+    "@apps-in-toss/web-framework": "3.9.0",
+    "three": "0.160.0"
+  },
+  "devDependencies": {
+    "vite": "8.3.6"
+  }
+}
